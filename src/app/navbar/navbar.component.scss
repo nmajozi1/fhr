@@ -1,0 +1,36 @@
+.nav-inline-grid-container {
+  position: relative;
+  height: auto;
+  width: 100%;
+  min-height: 127px;
+}
+
+.navbar-nav > li{
+  color: #000000;
+  margin-left:30px;
+  margin-right:30px;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 18px;
+  line-height: 1.4em;
+  font-family:  sans-serif;
+}
+
+.hyperlink-style {
+  color: #000000 !important;
+}
+
+
+ul.nav a:hover { color: #762DDD !important; }
+
+ul.nav a:active { color: #762DDD !important; }
+
+
