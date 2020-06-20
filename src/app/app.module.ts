@@ -13,6 +13,11 @@ import { NewsComponent } from './news/news.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ArtistComponent } from './artist/artist.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { initialState, reducers, effects } from './app.state';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,13 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    EffectsModule.forRoot(effects),
+    StoreModule.forRoot(reducers, {initialState}),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

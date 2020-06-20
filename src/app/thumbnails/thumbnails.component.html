@@ -1,11 +1,12 @@
-<div class="row">
-  <div class="col-sm-3 thumbnail-images">
-    <img src="../../assets/artists/Cassper.jpg" class="float-left" alt="Paris" width="390" height="400">
+<div class="row" *ngIf="projects$ | async as data">
+  <div class="col-sm-3 thumbnail-images" *ngFor="let projects of data.artists.projects.data[0].projects">
+    <img [src]="projects.projectArt" class="float-left" alt="Paris" width="390" height="400">
     <div class="overlay">
-      <div class="text">Cassper Nyovest / Sweet & Short</div>
+      <!-- <div class="text">Cassper Nyovest / Sweet & Short</div> -->
+      <div class="text">{{ projects.artist }} / {{ projects.name }}</div>
     </div>
   </div>
-  <div class="col-sm-3 thumbnail-images">
+  <!-- <div class="col-sm-3 thumbnail-images">
     <img src="../../assets/artists/dj sumbody.jpg" class="float-left" alt="Paris" width="390" height="400">
     <div class="overlay">
       <div class="text">DJ Sumbody / Ngwana Daddy</div>
@@ -46,5 +47,5 @@
     <div class="overlay">
       <div class="text">Kabza the small & Phori / Piano Hub</div>
     </div>
-  </div>
+  </div> -->
 </div>
